@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What&rsquo;s the Weather Like?</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body class="gradient">
+	<header>
+		<hgroup>
+			<h1>What&rsquo;s the Weather Like?</h1>
+			<h2>A Simple Little Weather App</h2>
+		</hgroup>
+	</header>
+
+	<section id="data">
+		<section id="today" class="day bordered rounded shadowed"></section>
+
+		<form id="search" class="rounded bordered shadowed" action="https://dl.dropboxusercontent.com/u/17225399/weatherapp/index.html">
+			<span class="caret"></span>
+			<fieldset>
+				<legend>City Search</legend>
+				What&rsquo;s the weather like in <input id="search-input" type="text" name="city" class="rounded bordered" placeholder="Enter your city name">?	
+			</fieldset>
+		</form>
+
+		<section id="this-week" class="rounded bordered shadowed"></section>
+	</section>
+
+	<script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/underscore.min.js"></script>
+	<script type="text/javascript" src="assets/js/backbone.min.js"></script>
+	<script type="text/javascript" src="assets/js/mustache.js"></script>
+	<script type="text/javascript" src="assets/js/moment.min.js"></script>
+	<script type="text/javascript" src="assets/js/base.js"></script>
+	<script type="text/x-mustache-template" id="template-thisweek">
+    <div class="container">
+  	{{#hasData}}
+    	<ul class="days">
+    		{{#data}}
+    			<li class="day rounded bordered gradient">
+    				<header>
+    					<h3>{{date_string}}</h3>
+    				</header>
+    				<div class="icon {{klass}}">{{forecast}}</div>
+    				<ul class="temps">
+    					<li class="high"><strong>{{high}}&deg;</strong></li>
+    					<li class="low">{{low}}&deg;</li>
+    				</ul>
+    			</li>
+    		{{/data}}
+    	</ul>
+  	{{/hasData}}
+  	{{^hasData}}
+  		No forecast data available
+  	{{/hasData}}
+    </div>
+	</script>
+	<script type="text/x-mustache-template" id="template-today">
+    <div class="container">		
+    {{#data}}
+  		<header>
+  			<h3>Today</h3>
+  			<h4>{{date_string}}</h4>
+  		</header>
+
+  		<div class="icon {{klass}}">{{forecast}}</div>
+  		<ul class="temps">
+  			<li class="high"><strong>{{high}}&deg;</strong></li>
+  			<li class="low">{{low}}&deg;</li>
+  		</ul>
+  		<small>{{humidity}}% Humidity</small>
+		{{/data}}
+		{{^data}}
+			No forecast data available
+		{{/data}}
+    </div>
+	</script>
+</body>
+</html>

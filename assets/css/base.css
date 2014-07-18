@@ -1,0 +1,303 @@
+html{
+  height: 100vh;
+	font-size: 14px;  
+}
+
+body {
+	padding: 2.14285714285714rem 7.14285714285714rem;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #000; 
+	text-align: center; }
+
+body.gradient {
+	background: #c1e2f9;
+	background: linear-gradient(to bottom,  #fff 0%,#c1e2f9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#c1e2f9",GradientType=0 ); /* IE6-9 */
+}
+
+@font-face {
+  font-family: 'RockSalt';
+  src: url('../fonts/RockSalt.ttf'); }
+
+h1 {
+	width: 48.21428571428571rem;
+	height: 3.85714285714286rem;
+	margin: 0 auto -0.5rem;
+	padding-top: 1.64285714285714rem;
+	font-size: 3.42857142857143rem;
+	color: #1915a4; 
+	background: url(../images/header_icon.png) 0 0 no-repeat;}
+
+h2 {
+	font-family: 'RockSalt', sans-serif;
+	color: #818080; }
+	h2:before, h2:after {
+		font-family: Helvetica, Arial, sans-serif;		
+		font-size: 2.5rem;
+		position: relative;
+		top: .7rem;
+	}
+	h2:before {
+		content: "\2022\00A0";
+	}
+	h2:after {
+		content: "\00A0\2022";
+	}
+
+.bordered {
+	background: #fff; 	
+	border: 1px solid #c3cdd3; }
+.rounded {
+	border-radius: 0.5rem; }
+.shadowed {
+	box-shadow: 0 0 5px #9ca8b0; }
+
+.container { display: none; }
+
+#data {
+	position: relative; 
+	margin-top: 3.57142857142857rem;
+	padding-top: 3.35714285714286rem;
+	padding-left: 21.42857142857143rem;}
+
+.day {
+	padding: 0.71428571428571rem; 
+	color: #9f9e9e; 
+	width: 7.14285714285714rem;
+	height: 9.71428571428571rem;}
+
+	.day.gradient {
+		background: linear-gradient(to bottom,  #f9f8f8 0%,#e4e3e3 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f8f8', endColorstr='#e4e3e3',GradientType=0 ); /* IE6-9 */
+	}	
+
+	.day .icon  {
+		padding-top: 4.64285714285714rem;
+		background-repeat: no-repeat;
+		background-position: 50% 1rem; }
+
+		.day .icon.cloudy-light {
+			background-image: url(../images/sm/cloudy_light.png);
+		}
+		.day .icon.cloudy {
+			background-image: url(../images/sm/cloudy.png);
+		}
+		.day .icon.fog {
+			background-image: url(../images/sm/fog.png);
+		}
+		.day .icon.hail {
+			background-image: url(../images/sm/hail.png);
+		}
+		.day .icon.lightning {
+			background-image: url(../images/sm/lightning.png);
+		}
+		.day .icon.rain-light {
+			background-image: url(../images/sm/rain_light.png);
+		}
+		.day .icon.rain-showers-light {
+			background-image: url(../images/sm/rain_showers_light.png);
+		}
+		.day .icon.rain-showers {
+			background-image: url(../images/sm/rain_showers.png);
+		}
+		.day .icon.rain {
+			background-image: url(../images/sm/rain.png);
+		}
+		.day .icon.snow-light {
+			background-image: url(../images/sm/snow_light.png);
+		}
+		.day .icon.snow {
+			background-image: url(../images/sm/snow.png);
+		}
+		.day .icon.sunny-mostly {
+			background-image: url(../images/sm/sunny_mostly.png);
+		}
+		.day .icon.sunny-partly {
+			background-image: url(../images/sm/sunny_partly.png);
+		}
+		.day .icon.sunny {
+			background-image: url(../images/sm/sunny.png);
+		}
+		.day .icon.thunder {
+			background-image: url(../images/sm/thunder.png);
+		}
+		.day .icon.thunderstorm {
+			background-image: url(../images/sm/thunderstorm.png);
+		}
+
+	.day .temps {
+		text-shadow: 1px 1px #fcfcfc;
+		list-style: none;
+	}
+
+	.day .high { 
+		color: #4b4a4a;
+		font-size: 1.71428571428571rem;
+    line-height: 1.33333333333333em;
+	}
+
+	.day .low { 
+		color: #8d8c8c;
+		font-size: 1.28571428571429rem; 
+	}
+
+#this-week {
+  min-height: 11.28571428571429rem;
+	padding: 1.5rem 1.42857142857143rem;
+	clear: both; 
+  overflow: auto; }
+
+  #this-week .days {
+    float: left; }
+
+	#this-week .day {
+		border-color: #e4e3e3;
+    display: inline-block; 
+    margin-left: 1.28571428571429rem; }
+
+    #this-week .day:first-child {
+      margin-left: 0; }
+
+#today {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 12.71428571428571rem;
+	height: auto;
+  min-height: 21.78571428571429rem;
+	font-size: 1.71428571428571rem; 	
+	padding: 1.64285714285714rem 3.57142857142857rem; 
+	color: #000 !important; }
+
+	#today header {
+		border-top: 1px solid #e7e5e5; }
+
+	#today h3 {
+		width: 5rem;
+		background: #fff;
+		text-transform: uppercase;
+		font-size: 1rem;
+		color: #9f9e9e;
+		margin: -.5rem auto 0.42857142857143rem; }
+
+	#today .icon  {
+		padding-top: 11.28571428571429rem;
+		background-position: 50% 1.85714285714286rem;
+	}
+
+		#today .icon.cloudy-light {
+			background-image: url(../images/lg/cloudy_light.png);
+		}
+		#today .icon.cloudy {
+			background-image: url(../images/lg/cloudy.png);
+		}
+		#today .icon.fog {
+			background-image: url(../images/lg/fog.png);
+		}
+		#today .icon.hail {
+			background-image: url(../images/lg/hail.png);
+		}
+		#today .icon.lightning {
+			background-image: url(../images/lg/lightning.png);
+		}
+		#today .icon.rain-light {
+			background-image: url(../images/lg/rain_light.png);
+		}
+		#today .icon.rain-showers-light {
+			background-image: url(../images/lg/rain_showers_light.png);
+		}
+		#today .icon.rain-showers {
+			background-image: url(../images/lg/rain_showers.png);
+		}
+		#today .icon.rain {
+			background-image: url(../images/lg/rain.png);
+		}
+		#today .icon.snow-light {
+			background-image: url(../images/lg/snow_light.png);
+		}
+		#today .icon.snow {
+			background-image: url(../images/lg/snow.png);
+		}
+		#today .icon.sunny-mostly {
+			background-image: url(../images/lg/sunny_mostly.png);
+		}
+		#today .icon.sunny-partly {
+			background-image: url(../images/lg/sunny_partly.png);
+		}
+		#today .icon.sunny {
+			background-image: url(../images/lg/sunny.png);
+		}
+		#today .icon.thunder {
+			background-image: url(../images/lg/thunder.png);
+		}
+		#today .icon.thunderstorm {
+			background-image: url(../images/lg/thunderstorm.png);
+		}
+
+	#today .temps {
+		overflow: hidden;
+		margin-top: 0.92857142857143rem;
+		margin-bottom: 1.14285714285714rem;
+	}
+		#today .temps li {
+			display: inline;
+			vertical-align: middle;
+			padding: 0.71428571428571rem; }
+
+			#today .temps li:first-child {
+				padding-right: 0;
+				padding-left: 0; }
+
+			#today .temps li:last-child {
+				border-left: 1px solid #e7e5e5;				
+				padding-right: 0; }
+
+	#today .low {
+		font-size: 1.28571428571429rem;
+		color: #a5a4a4; }
+
+	#today small {
+		font-size: 1rem; }
+
+#search {
+	position: relative;
+	float: left;
+	margin-left: 1.07142857142857rem;
+	margin-bottom: 1.5rem;
+	text-align: left;
+	padding: 1rem 0.35714285714286rem 1rem 1rem;
+	font-size: 1.28571428571429rem; }
+
+	.caret {
+			display: block;
+	    width: 20px;
+	    height: 50px;
+	    position: absolute;
+	    top: 13%;
+	    left: -20px;
+	    overflow: hidden; }
+
+		.caret:after {
+		    content: "";
+		    position: absolute;
+		    width: 30px;
+		    height: 30px;
+		    background: #fff;
+        -webkit-transform: rotate(45deg);
+		    -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+		    top: 10px;
+		    left: 10px;
+		    box-shadow: -1px 1px 5px #9ca8b0; }
+
+	#search legend { display: none; }
+
+	#search input {
+		outline: none;
+		width: 13.85714285714286rem;
+		margin: 0 0.35714285714286rem 0 0.3rem;
+		padding: 0.7rem;
+		font-size: 1rem;
+		font-family: Helvetica, Arial, sans-serif;
+		border-color: #acacac; }
+
